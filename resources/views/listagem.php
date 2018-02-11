@@ -18,7 +18,7 @@
                 <td><?= $p->valor ?></td>
                 <td><?= $p->descricao ?></td>
                 <td><?= $p->quantidade ?></td>
-                <td><a href="/produtos/mostra?id=<?= $p->id ?>">
+                <td><a href="/produtos/mostra/<?= $p->id ?>">
                     Visualizar
                     <!-- span class="glyphicon glyphicon-search" aria-hidden="true"></span -->
                 </a></td>

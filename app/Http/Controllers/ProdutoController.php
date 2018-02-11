@@ -12,7 +12,7 @@ class ProdutoController extends Controller {
     }
 
     public function mostra() {
-        $id = Request::input('id');
+        $id = Request::route('id');
 
         $resposta = DB::select('select * from produtos where id = ?', [$id]);
 
