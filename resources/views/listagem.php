@@ -18,6 +18,10 @@
                 <td><?= $p->valor ?></td>
                 <td><?= $p->descricao ?></td>
                 <td><?= $p->quantidade ?></td>
+                <td><a href="/produtos/mostra?id=<?= $p->id ?>">
+                    Visualizar
+                    <!-- span class="glyphicon glyphicon-search" aria-hidden="true"></span -->
+                </a></td>
             </tr>
 
         <?php endforeach ?>
