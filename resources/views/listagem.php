@@ -20,7 +20,7 @@
                 <td><?= $p->quantidade ?></td>
                 <td><a href="/produtos/mostra/<?= $p->id ?>">
                     Visualizar
-                    <!-- span class="glyphicon glyphicon-search" aria-hidden="true"></span -->
+                    <!-- span class="glyphicon glyphicon-search"></span -->
                 </a></td>
             </tr>
 
