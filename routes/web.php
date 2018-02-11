@@ -1,11 +1,5 @@
 <?php
 
-Route::get('/', function()
-{
+Route::get('/', function() {
   return 'Primeira lógica com Laravel';
 });
-
-/* Route::get('/', function () {
-    return view('welcome');
-});
-*/
