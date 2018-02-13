@@ -1,4 +1,4 @@
-@extends('principal')
+@extends('layout.principal')
 
 @section('conteudo')
 <h1>Listagem de produtos com Laravel</h1>
