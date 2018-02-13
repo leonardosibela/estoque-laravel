@@ -1,6 +1,13 @@
 @extends('layout.principal')
 
 @section('conteudo')
+
+@if(old('nome'))
+    <div class="alert alert-success">
+        <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
+    </div>
+@endif
+
 <h1>Listagem de produtos com Laravel</h1>
 
 <table class="table table-striped table-bordered table-hover">
