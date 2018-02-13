@@ -7,7 +7,7 @@
 
     @foreach ($produtos as $p)
 
-        <tr>
+        <tr class="{{$p->quantidade <= 1 ? 'table-danger' : ''}}">
             <td>{{$p->nome}}</td>
             <td>{{$p->valor}}</td>
             <td>{{$p->descricao or 'Produto sem descriação'}}</td>
