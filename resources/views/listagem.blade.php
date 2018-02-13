@@ -8,11 +8,11 @@
     <?php foreach ($produtos as $p) : ?>
 
         <tr>
-            <td><?= $p->nome ?></td>
-            <td><?= $p->valor ?></td>
-            <td><?= $p->descricao ?></td>
-            <td><?= $p->quantidade ?></td>
-            <td><a href="/produtos/mostra/<?= $p->id ?>">
+            <td>{{$p->nome}}</td>
+            <td>{{$p->valor}}</td>
+            <td>{{$p->descricao or 'Produto sem descriação'}}</td>
+            <td>{{$p->quantidade}}</td>
+            <td><a href="/produtos/mostra/{{$p->id}}">
                 Visualizar
                 <!-- span class="glyphicon glyphicon-search"></span -->
             </a></td>
