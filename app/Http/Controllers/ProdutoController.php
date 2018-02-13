@@ -40,6 +40,6 @@ class ProdutoController extends Controller {
 
     public function listaJson() {
         $produtos = DB::select('select * from produtos');
-        return $produtos;
+        return response()->json($produtos);;
     }
 }
