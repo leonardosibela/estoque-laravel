@@ -3,23 +3,23 @@
 @section('conteudo')
 <h1>Formulário de produto</h1>
 
-<form action="">
+<form action="/produtos/adiciona">
 
     <div class="form-group">
         <label>Nome</label>
-        <input type="text" class="form-control">
+        <input name="nome" type="text" class="form-control">
     </div>
     <div class="form-group">
         <label>Valor</label>
-        <input type="text" class="form-control">
+        <input name="valor" type="text" class="form-control">
     </div>
     <div class="form-group">
         <label>Quantidade</label>
-        <input type="text" class="form-control">
+        <input name="quantidade" type="text" class="form-control">
     </div>
     <div class="form-group">
         <label>Descriação</label>
-        <textarea class="form-control"></textarea>
+        <textarea name="descricao" class="form-control"></textarea>
     </div>
 
     <button class="btn btn-primary" type="submit">Adicionar</button>
