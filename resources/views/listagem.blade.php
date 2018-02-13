@@ -5,7 +5,7 @@
 
 <table class="table table-striped table-bordered table-hover">
 
-    <?php foreach ($produtos as $p) : ?>
+    @foreach ($produtos as $p)
 
         <tr>
             <td>{{$p->nome}}</td>
@@ -18,7 +18,7 @@
             </a></td>
         </tr>
 
-    <?php endforeach ?>
+    @endforeach
 
 </table>
 @stop
