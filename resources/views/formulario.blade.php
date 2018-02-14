@@ -1,6 +1,17 @@
 @extends('layout.principal')
 
 @section('conteudo')
+
+<div class="alert alert-danger">
+<ul>
+@foreach($errors->all() as $error)
+
+    <li>{{$error}}</li>
+
+@endforeach
+</ul>
+</div>
+
 <h1>Formulário de produto</h1>
 
 <form action="/produtos/adiciona" method="post">
