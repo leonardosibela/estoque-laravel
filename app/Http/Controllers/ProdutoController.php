@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\DB;
 use Request;
+use Validator;
 use App\Produto;
+use App\Http\Requests\ProdutoRequest;
 
 class ProdutoController extends Controller {
 
@@ -21,10 +23,9 @@ class ProdutoController extends Controller {
         return view('formulario');
     }
 
-    public function adiciona() {
-        $params = Request::all();
+    public function adiciona(ProdutoRequest $request) {
+        $params = $request->all();
         Produto::create($params);   
-
         return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
 
