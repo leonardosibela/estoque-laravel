@@ -12,8 +12,7 @@ class ProdutoController extends Controller {
         return view('produto.listagem')->with('produtos', $produtos);
     }
 
-    public function mostra() {
-        $id = Request::route('id');
+    public function mostra($id) {
         $produto = Produto::find($id);
         return view('produto.detalhes')->with('produto', $produto);
     }
@@ -29,8 +28,7 @@ class ProdutoController extends Controller {
         return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
 
-    public function remove() {
-        $id = Request::route('id');
+    public function remove($id) {
         $produto = Produto::find($id);
         $produto->delete();
         return redirect('/produtos');
