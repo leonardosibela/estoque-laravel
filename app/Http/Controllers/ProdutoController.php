@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\DB;
 use Request;
+use App\Produto;
 
 class ProdutoController extends Controller {
 
     public function lista() {
-        $produtos = DB::select('select * from produtos');
+        $produtos = Produto::all();
 
         return view('produto.listagem')->with('produtos', $produtos);
     }
