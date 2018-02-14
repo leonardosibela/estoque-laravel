@@ -14,13 +14,8 @@ class ProdutoController extends Controller {
 
     public function mostra() {
         $id = Request::route('id');
-
-        $resposta = DB::select('select * from produtos where id = ?', [$id]);
-
-        if(empty($resposta)) {
-            return "Esse produto não existe";
-        }
-        return view('produto.detalhes')->with('produto', $resposta[0]);
+        $produto = Produto::find($id);
+        return view('produto.detalhes')->with('produto', $produto);
     }
 
     public function novo() {
