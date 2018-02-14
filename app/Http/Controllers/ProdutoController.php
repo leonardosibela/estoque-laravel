@@ -29,6 +29,13 @@ class ProdutoController extends Controller {
         return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
 
+    public function remove() {
+        $id = Request::route('id');
+        $produto = Produto::find($id);
+        $produto->delete();
+        return redirect('/produtos');
+    }
+
     public function listaJson() {
         $produtos = DB::select('select * from produtos');
         return response()->json($produtos);;
