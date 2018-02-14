@@ -23,13 +23,15 @@ class ProdutoController extends Controller {
     }
 
     public function adiciona() {
-        $nome = Request::input('nome');
-        $valor = Request::input('valor');
-        $quantidade = Request::input('quantidade');
-        $descricao = Request::input('descricao');
+
+        $produto = new Produto();
+
+        $produto->nome = Request::input('nome');
+        $produto->valor = Request::input('valor');
+        $produto->quantidade = Request::input('quantidade');
+        $produto->descricao = Request::input('descricao');
         
-        DB::select('insert into produtos (nome, valor, quantidade, descricao) values (?, ?, ?, ?)', 
-            [$nome, $valor, $quantidade, $descricao]);
+        $produto->save();   
 
         return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
